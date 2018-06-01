@@ -12,6 +12,7 @@ This service design is based on this assumptions:
 
 ## Heroku design
 ![alt text](https://raw.githubusercontent.com/TrentEat-ISDE-2018/TrentEat-Documentation/master/Phase2-Design/ISDE_Heroku_management.png)
+
 Since Heroku offers only 5 free slot and 2 are already occupied by assignments, the project is splitted in 3 parts:
 - the Telegram bot, which manages the user interface and user data
 - the business process, which manage all other services and provide information for the users
