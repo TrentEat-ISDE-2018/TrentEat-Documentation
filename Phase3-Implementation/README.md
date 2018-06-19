@@ -38,3 +38,31 @@ GET http://datalayer.herokuapp.com/weather/{API KEY}/{lat: 46.0747793}/{lon: 11.
     "temp_max": 26
 }
 ```
+### Data Service
+The data service consists of a Heroku Postgres DB and a REST service for CRUD operations. From the original dataset, in the db are saved only Agriturs that offered eating service and the data are filtered. Also, using the Geocoding service, the fields latitude and longitude were added. Since some places weren't recognized by Google Maps, then some addresses were slightly modified. All GET request are free, the other requests that modify the db are restricted by a key. 
+```
+GET https://datalayer.herokuapp.com/agritur/{complete name of agritur, such SOCIETA' AGRICOLA MASO DELLO SPECK}
+```
+```
+GET https://datalayer.herokuapp.com/agritur/all
+```
+```
+PUT/DELETE https://datalayer.herokuapp.com/agritur/{complete name}?key={key}
+```
+```
+POST https://datalayer.herokuapp.com/agritur?key={key}
+```
+```json
+{
+    "phone": "340 1524315",
+    "email": null,
+    "website": null,
+    "altitude": null,
+    "address": "Loc. Pozze di Sopra, n. 2, Daiano",
+    "lat": 46.3056346,
+    "lon": 11.4362104,
+    "name": "SOCIETA' AGRICOLA MASO DELLO SPECK",
+    "num_for_eat": 60,
+    "num_for_sleep": 0
+}
+```
