@@ -71,16 +71,24 @@ POST https://datalayer.herokuapp.com/agritur?key={key}
 The business logic service manages all the previous service in order to provide a SOAP API for clients.
 Methods list:
 ```java
-	//get data and weather of an agritur
-	public Agritur getDetailedAgritur(String name);
-	//get agriturs near a GPS location
-	public List<Agritur> getNearAgritur(double distance, double lat, double lon);
-	//get agriturs that have <query> into their names
-	public List<Agritur> getAgriturByQuery(String query);
-	//let a user vote an agritur
-	public void userMarkAgritur(String userId, String agritur, double mark);
-	//the user decides to view an agritur info page
-	public void userViewAgritur(String userId, String agritur);
-	//the user asks for recommendation
-	public List<Agritur> recommendAgritur(String userId);
+//get data and weather of an agritur
+public Agritur getDetailedAgritur(String name);
+
+//get agriturs near a GPS location
+public List<Agritur> getNearAgritur(double distance, double lat, double lon);
+
+//get agritur near a place, given place name
+public List<Agritur> getAgriturByPlace(String place, double distance);
+
+//get agriturs that have <query> into their names
+public List<Agritur> getAgriturByQuery(String query);
+
+//let a user vote an agritur
+public void userMarkAgritur(String userId, String agritur, double mark);
+
+//the user decides to view an agritur info page
+public void userViewAgritur(String userId, String agritur);
+
+//the user asks for recommendation
+public List<Agritur> recommendAgritur(String userId);
 ```
