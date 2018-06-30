@@ -92,3 +92,7 @@ public void userViewAgritur(String userId, String agritur);
 //the user asks for recommendation
 public List<Agritur> recommendAgritur(String userId);
 ```
+The service is available at:
+```
+GET https://businesslayer.herokuapp.com/agritur
+```
