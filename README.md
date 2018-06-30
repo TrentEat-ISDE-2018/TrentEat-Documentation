@@ -11,9 +11,15 @@ In order to fulfill the requirements, the service must save the list of agritur,
 
 ### Implementation
 The geocoding service is an REST adapter of Google Maps API: https://developers.google.com/maps/documentation/geocoding/intro
+
 The weather service is an REST adapter of OpenWeatherMaps API: https://openweathermap.org/
+
 The data service consists of a Heroku Postgres DB and a REST service for CRUD operations.
+
 The business logic service manages all the previous service in order to provide a SOAP API for clients.
+
 Also, the business service adapts a recommendation service from Recombee: https://docs.recombee.com/api.html
+
 For a detailed list of API call, see the Implementation folder.
+
 For a user-friendly client, a Telegram bot was implemented, available here: https://t.me/TrentEatBot
